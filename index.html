@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alara'ya Özel</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #0a0a0a;
+            color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .container {
+            position: relative;
+            z-index: 10;
+            padding: 20px;
+            border-radius: 15px;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 0 30px rgba(255, 105, 180, 0.2);
+            animation: fadeIn 2s ease-in;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: #ff69b4;
+            text-shadow: 0 0 10px #ff69b4;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            color: #eee;
+        }
+
+        .heart-icon {
+            font-size: 50px;
+            color: #e74c3c;
+            animation: heartbeat 1.2s infinite;
+        }
+
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Arka plan animasyonu */
+        .circles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .circles li {
+            position: absolute;
+            display: block;
+            list-style: none;
+            width: 20px;
+            height: 20px;
+            background: rgba(255, 105, 180, 0.3);
+            animation: animate 25s linear infinite;
+            bottom: -150px;
+            border-radius: 50%;
+        }
+
+        @keyframes animate {
+            0% { transform: translateY(0) rotate(0deg); opacity: 1; border-radius: 0; }
+            100% { transform: translateY(-1000px) rotate(720deg); opacity: 0; border-radius: 50%; }
+        }
+    </style>
+</head>
+<body>
+
+    <ul class="circles">
+        <li style="left: 25%; width: 80px; height: 80px; animation-delay: 0s;"></li>
+        <li style="left: 10%; width: 20px; height: 20px; animation-delay: 2s; animation-duration: 12s;"></li>
+        <li style="left: 70%; width: 20px; height: 20px; animation-delay: 4s;"></li>
+        <li style="left: 40%; width: 60px; height: 60px; animation-delay: 0s; animation-duration: 18s;"></li>
+        <li style="left: 65%; width: 20px; height: 20px; animation-delay: 0s;"></li>
+        <li style="left: 75%; width: 110px; height: 110px; animation-delay: 3s;"></li>
+    </ul>
+
+    <div class="container">
+        <div class="heart-icon">❤️</div>
+        <h1>Alara için...</h1>
+        <p>Dünyadaki en güzel gülüşe sahip olan insana,<br> 
+        Varlığınla hayatımı güzelleştirdiğin için teşekkürler.</p>
+        <p><strong>İyi ki varsın!</strong></p>
+    </div>
+
+</body>
+</html>
